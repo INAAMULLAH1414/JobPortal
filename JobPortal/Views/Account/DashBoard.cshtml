@@ -1,0 +1,92 @@
+﻿@model IEnumerable<JobPortal.Models.Application>
+
+@{
+    ViewData["Title"] = "DashBoard";
+}
+<div class="row">
+<div class="col-md-10">
+<h3>
+    Welcome @ViewBag.Username
+</h3>
+<h1>All Applications </h1>
+</div>
+<div class="col-md-2">
+    
+    <a asp-action="Logout">Logout</a>
+</div>
+    </div>
+
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Profile)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PlacePosting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PostAppliedFor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.FatherName)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DateofBirth)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.CNIC)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+
+            <td>
+                @*@Html.DisplayFor(modelItem => item.URL)*@
+                <img src="@item.Profile" height="80" width="120" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlacePosting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PostAppliedFor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateofBirth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CNIC)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+
+                <a asp-action="Delete"   asp-route-id="@item.Id">Delete</a> |
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>

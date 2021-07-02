@@ -1,0 +1,234 @@
+﻿@model JobPortal.ViewModels.ApplicationVM
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<style>
+    body {
+        background-size: cover;
+    }
+
+    *[role="form"] {
+        max-width: 1000px;
+        padding: 15px;
+        margin: 0 auto;
+        border-radius: 0.3em;
+        background-color: #f2f2f2;
+    }
+
+        *[role="form"] h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            color: #000000;
+            margin-top: 5%;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+</style>
+<div class="row">
+    <img src="~/images/images.png" style="height: 200px">
+    <div class="text-center col-md-8" style="margin-top:5%">
+
+        <h1>Job Application Form</h1>
+
+        <h4>Fatima Jinnah Medical University</h4>
+    </div>
+
+
+</div>
+
+<hr />
+<div class="row container-fluid" role="form">
+    <div class="col-md-4">
+        <form class="form-horizontal was-validated" method="post" enctype="multipart/form-data" asp-controller="Home" asp-action="Create">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div>
+                <p>Upload Profile Image:</p>
+                <input type="file" name="files" asp-for="Profile" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PlacePosting" class="control-label"></label>
+                <input asp-for="PlacePosting" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="PlacePosting" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PostAppliedFor" class="control-label"></label>
+                <input asp-for="PostAppliedFor" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="PostAppliedFor" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="FatherName" class="control-label"></label>
+                <input asp-for="FatherName" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="FatherName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DateofBirth" class="control-label"></label>
+                <input asp-for="DateofBirth" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="DateofBirth" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="CNIC" class="control-label"></label>
+                <input asp-for="CNIC" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="CNIC" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Domicile" class="control-label"></label>
+                <input asp-for="Domicile" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Domicile" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Contact" class="control-label"></label>
+                <input asp-for="Contact" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Contact" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Contact1" class="control-label"></label>
+                <input asp-for="Contact1" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Contact1" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PostalAddress" class="control-label"></label>
+                <input asp-for="PostalAddress" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="PostalAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PermanentAddress" class="control-label"></label>
+                <input asp-for="PermanentAddress" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="PermanentAddress" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                        <div class="form-group">Are You Hafiz-e-Quran </div>
+                        <div>
+
+                            @Html.RadioButtonFor(model => model.HafizeQuran, "Yes")Yes
+
+                            @Html.RadioButtonFor(model => model.HafizeQuran, "No")No
+
+                            @Html.ValidationMessageFor(model => model.HafizeQuran, "", new { @class = "error" })
+                        </div>
+                    </div>
+            
+                    <div class="form-group">
+                        <div >Are You Govt Officer </div>
+                        <div>
+                            @Html.RadioButtonFor(model => model.GovtService, "Yes")Yes
+
+                            @Html.RadioButtonFor(model => model.GovtService, "No", new { @checked = true })No
+
+                            @Html.ValidationMessageFor(model => model.GovtService, "", new { @class = "error" })
+                        </div>
+                    </div>
+             
+
+                  <div class="form-group">
+                        <div class="form-group">Do you face any disability </div>
+                        <div>
+
+                            @Html.RadioButtonFor(model => model.Disability, "Yes")Yes
+
+                            @Html.RadioButtonFor(model => model.Disability, "No")No
+
+                            @Html.ValidationMessageFor(model => model.Disability, "", new { @class = "error" })
+                        </div>
+                    </div>
+             <div class="form-group">
+                <label asp-for="Religion" class="control-label"></label>
+                <input asp-for="Religion" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Religion" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <label asp-for="Gender" class="control-label"></label>
+                <input asp-for="Gender" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MartialStatus" class="control-label"></label>
+                <input asp-for="MartialStatus" class="form-control" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                <span asp-validation-for="MartialStatus" class="text-danger"></span>
+            </div >
+
+           
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

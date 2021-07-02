@@ -1,0 +1,145 @@
+﻿@model JobPortal.Models.Application
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Application</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Profile)
+        </dt>
+        <dd class="col-sm-10">
+            <img src="@Model.Profile" height="80" width="120" />
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PlacePosting)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PlacePosting)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostAppliedFor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostAppliedFor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FatherName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FatherName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DateofBirth)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DateofBirth)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Age)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Age)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CNIC)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CNIC)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Domicile)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Domicile)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Contact)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Contact1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Contact1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PostalAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PostalAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.PermanentAddress)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.PermanentAddress)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.GovtService)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.GovtService)
+        </dd>
+      
+       
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Disability)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Disability)
+        </dd>
+       
+     
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HafizeQuran)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HafizeQuran)
+        </dd>
+       
+     
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Religion)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Religion)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Gender)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Gender)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MartialStatus)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MartialStatus)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="DashBoard">Back to List</a>
+</div>
